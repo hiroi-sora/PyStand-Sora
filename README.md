@@ -264,10 +264,6 @@ def initRuntimeEnvironment(startup_script):
         sys.stdout = fp
         sys.stderr = fp
 
-    def except_hook(cls, exception, traceback):
-        sys.__excepthook__(cls, exception, traceback)
-    # sys.excepthook = except_hook
-
     # 定义一个最简单的消息弹窗
     def MessageBox(msg, info='Umi-OCR Message'):
         import ctypes
@@ -377,6 +373,12 @@ Window {
 ```
 
 为了给qml提供语法补全，可以在VS Code插件商店中搜索并安装 `QML`、`QML Snippets` 等插件。
+
+### 调试与发布
+
+调试直接在VS Code中F5运行，支持断点等功能。发布则直接将代码连同exe压缩成一个文件即可，当然你也可以进一步封包和加密。
+
+使用本方案的好处是调试与发布是完全相同的环境，VS Code调用了同一个Python解释器和第三方库文件，可以在开发阶段就检查出兼容性问题。
 
 ### 手动裁切模块
 
