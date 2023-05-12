@@ -174,9 +174,16 @@ cmake --build build --config Release
 
 #### 下载 VS Code 
 
+##### Win10/11 用户：
+
 1. 打开官网： https://code.visualstudio.com/Download
 2. 下载 System Installer x64
 3. 安装过程中注意：建议勾选 `将“通过Code打开”操作添加到Windows资源管理器文件(目录)上下文菜单`
+
+##### Win7 用户：
+
+- `1.70.3`版是最后一个支持win7的版本，请在下述地址下载。（选Windows System）
+- https://code.visualstudio.com/updates/v1_70
 
 #### 安装插件
 
