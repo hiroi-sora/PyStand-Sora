@@ -35,7 +35,7 @@
 
 建议将内容目录改成你项目的名字便于用户区分。比如项目叫 [Umi-OCR](https://github.com/hiroi-sora/Umi-OCR) ，那么文件夹可以叫 `Umi-OCR-data` 。
 
-示例，软件最终发布时可以是这样的结构（假设不封包）：
+示例，可以是这样的结构（假设不封包）：
 ```
 Umi-OCR 文字识别器
 ├─ Umi-OCR-data
@@ -55,6 +55,8 @@ Umi-OCR 文字识别器
 │    └─ main.py
 └─ Umi-OCR.exe
 ```
+
+封包和加密则可以参考原作者的 [文章](https://www.zhihu.com/question/48776632/answer/2336654649) 。
 
 ## 编译 PyStand.exe
 
