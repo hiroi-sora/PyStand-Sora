@@ -310,7 +310,7 @@ if __name__ == '__main__':
 
 ### PyQt Hello World
 
-在 `AppData` 下编写你项目的正式代码。举个例子，假设我直接创建一个 `app.py` ：
+在 `AppData` 下编写你项目的正式代码。举个例子，假设直接创建一个 `app.py` ：
 
 ```python
 from PySide2.QtWidgets import QApplication, QLabel
@@ -334,3 +334,44 @@ if __name__ == '__main__':
 ```
 
 按F5运行一下试试，窗口显示出来了。
+
+### QML Hello World
+
+如果在中文路径运行qml，除了需要在main.py中初始化Qt搜索路径，还需要在创建qml引擎时初始化qml库路径。如下：
+
+app.py
+```python
+import os
+import sys
+from PySide2.QtGui import QGuiApplication
+from PySide2.QtQml import QQmlApplicationEngine
+
+app = QGuiApplication(sys.argv)
+engine = QQmlApplicationEngine()
+engine.addImportPath("./.site-packages/PyQt5/Qt5/qml")  # 相对路径重新导入包
+current_dir = os.path.dirname(os.path.abspath(__file__))  # 同级目录
+engine.load(f"{current_dir}/app.qml")  # 启动同级目录下的app.qml
+if not engine.rootObjects():
+    sys.exit(-1)
+sys.exit(app.exec_())
+```
+
+app.qml
+```qml
+import QtQuick 2.15
+import QtQuick.Window 2.15
+
+Window {
+    visible: true
+    width: 800
+    height: 500
+    title: "Hello World!"
+
+    Text {
+        text: "Hello World!"
+        anchors.centerIn: parent
+    }
+}
+```
+
+为了给qml提供语法补全，可以在VS Code插件商店中搜索并安装 `QML`、`QML Snippets` 等插件。
