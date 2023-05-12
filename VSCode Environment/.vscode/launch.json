@@ -1,0 +1,21 @@
+{
+    // 使用 IntelliSense 了解相关属性。 
+    // 悬停以查看现有属性的描述。
+    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: 当前文件",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/AppData/main.py", // 【改】启动脚本的位置
+            "cwd": "${workspaceFolder}", // 工作目录，与启动器exe一致
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "env": {
+                "PYDEVD_DISABLE_FILE_VALIDATION": "1", // 禁用验证
+            },
+            "python": "${workspaceFolder}/AppData/.runtime/python.exe" // 【改】解释器路径
+        }
+    ]
+}
