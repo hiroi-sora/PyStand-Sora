@@ -47,16 +47,16 @@ Umi-OCR 文字识别器
 │    ├─ app
 │    │    └─ 程序逻辑
 │    ├─ assets
-│    │    └─ 资源文件，如图标
+│    │    └─ 资源文件
 │    ├─ ui
-│    │    └─ 界面文件，如qml
+│    │    └─ 界面文件
 │    ├─ utils
-│    │    └─ 一些通用工具类的代码
+│    │    └─ 通用工具
 │    └─ main.py
 └─ Umi-OCR.exe
 ```
 
-封包和加密则可以参考原作者的 [文章](https://www.zhihu.com/question/48776632/answer/2336654649) 。
+当然，如果考虑封包和加密的话则可能不适用这种目录结构，可以参考原作者的 [文章](https://www.zhihu.com/question/48776632/answer/2336654649) 。
 
 ## 编译 PyStand.exe
 
