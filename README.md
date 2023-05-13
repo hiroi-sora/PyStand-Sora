@@ -33,12 +33,12 @@
 
 上面这个例子中，我把解释器和脚本统统都放在 `AppData` 这个内容目录中，这样可以做到程序根目录下只有两个文件(夹)，更加简洁优雅。
 
-建议将内容目录改成你项目的名字便于用户区分。比如项目叫 [Umi-OCR](https://github.com/hiroi-sora/Umi-OCR) ，那么文件夹可以叫 `Umi-OCR-data` 。
+建议将内容目录改成你项目的名字便于用户区分。比如项目叫 MyApp ，那么文件夹可以叫 `MyApp-data` 。
 
 示例，可以是这样的结构（假设不封包）：
 ```
-Umi-OCR 文字识别器
-├─ Umi-OCR-data
+MyApp
+├─ MyApp-data
 │    ├─ .runtime
 │    │    └─ Python解释器扔在这~
 │    ├─ .site-packages
@@ -53,7 +53,7 @@ Umi-OCR 文字识别器
 │    ├─ utils
 │    │    └─ 通用工具
 │    └─ main.py
-└─ Umi-OCR.exe
+└─ MyApp.exe
 ```
 
 当然，如果考虑封包和加密的话则可能不适用这种目录结构，可以参考原作者的 [文章](https://www.zhihu.com/question/48776632/answer/2336654649) 。
@@ -272,7 +272,7 @@ def initRuntimeEnvironment(startup_script):
         sys.stderr = fp
 
     # 定义一个最简单的消息弹窗
-    def MessageBox(msg, info='Umi-OCR Message'):
+    def MessageBox(msg, info='Message'):
         import ctypes
         ctypes.windll.user32.MessageBoxW(None, str(msg), str(info), 0)
         return 0
