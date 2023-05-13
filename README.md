@@ -290,7 +290,7 @@ def initRuntimeEnvironment(startup_script):
     # 初始化Qt搜索路径，采用相对路径，避免中文路径编码问题
     try:
         from PySide2.QtCore import QCoreApplication
-        QCoreApplication.addLibraryPath('./.site-packages/PyQt5/Qt5/plugins')
+        QCoreApplication.addLibraryPath('./.site-packages/PySide2/plugins')
     except Exception as e:
         print(e)
         os.MessageBox(f'addLibraryPath fail!\n\n{e}')
@@ -353,7 +353,7 @@ from PySide2.QtQml import QQmlApplicationEngine
 
 app = QGuiApplication(sys.argv)
 engine = QQmlApplicationEngine()
-engine.addImportPath("./.site-packages/PyQt5/Qt5/qml")  # 相对路径重新导入包
+engine.addImportPath("./.site-packages/PySide2/qml")  # 相对路径重新导入包
 current_dir = os.path.dirname(os.path.abspath(__file__))  # 同级目录
 engine.load(f"{current_dir}/app.qml")  # 启动同级目录下的app.qml
 if not engine.rootObjects():
