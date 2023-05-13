@@ -238,7 +238,7 @@ cmake --build build --config Release
     ```
     runpip/python.exe -m pip download --only-binary=:all: --platform win32 PySide2
     ```
-2. 在runpip的同级目录就可以看到下载好了两个包。用压缩软件（如7z，winrar）可以直接打开它们，或者后缀改为.zpi也能打开。
+2. 在runpip的同级目录就可以看到下载好了两个包。用压缩软件（如7z，winrar）可以直接打开它们，或者后缀改为.zip也能打开。
    ```
     ├─ PySide2-5.15.2.1-5.15.2-cp35.cp36.cp37.cp38.cp39.cp310-none-win32.whl
     └─ shiboken2-5.15.2.1-5.15.2-cp35.cp36.cp37.cp38.cp39.cp310-none-win32.whl
