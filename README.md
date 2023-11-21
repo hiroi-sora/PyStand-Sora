@@ -4,7 +4,11 @@
 
 本项目基于原项目做了一些改动，在README中记录了一些我的经验和遇到的坑，并附带了一套使用 VS Code 开发内嵌式Python的解决方法（拥有完整的语法提示和调试功能）。
 
-这篇README可以指导小白如何通过PyStand部署项目，自定义项目名称和路径，享受愉快的Python开发体验。完事了可以轻松打包带走。不会C++或者Cmake也木有关系，这里提供了一键编译脚本。
+**使用案例： [Umi-OCR](https://github.com/hiroi-sora/Umi-OCR)**
+
+---
+
+本文可以指导小白通过PyStand部署项目，自定义项目名称和路径，享受愉快的Python开发体验。完事了可以轻松打包带走。不会C++或者Cmake也木有关系，这里提供了一键编译脚本。
 
 不妨先看看 [原项目](https://github.com/skywind3000/PyStand) 的Readme。
 
